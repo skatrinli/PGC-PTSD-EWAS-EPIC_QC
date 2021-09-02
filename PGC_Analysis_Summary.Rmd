@@ -52,7 +52,7 @@ pheno.raw <- read.csv("Pheno_QC.csv")
 pheno <- read.csv("Pheno_QC_EWAS.csv")
 
 # Beta values
-beta <- local(get(load("IntermediaryFiles.RData")))
+load("IntermediaryFiles.RData")
 
 # Beta values after removing cross hybridized probes
 beta_removed_cross <- fread("noob_qcd_crossReactiveProbesRemoved.csv", data.table = F)
